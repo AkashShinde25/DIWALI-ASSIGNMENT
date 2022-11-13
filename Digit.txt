@@ -1,0 +1,31 @@
+class Digit
+{
+static int count = 1;
+
+static int methDigit(int num)
+{
+num =num/10;
+	if (num == 0)
+		return count;
+		
+	else
+	{
+	count++;
+	return methDigit(num);
+	}
+}
+
+
+public static void main(String args[])
+{
+//Scanner sc = new Scanner(System.in);
+//int num = sc.nextInt();
+  int num = 5478;
+  
+  int res = methDigit(num);
+  System.out.println("The digits are "+res);
+
+
+
+}
+}
